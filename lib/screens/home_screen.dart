@@ -1,7 +1,6 @@
 import 'package:docs_clone/colors.dart';
 import 'package:docs_clone/common/loader.dart';
 import 'package:docs_clone/models/document.dart';
-import 'package:docs_clone/models/error_model.dart';
 import 'package:docs_clone/repository/auth_repository.dart';
 import 'package:docs_clone/repository/document_repository.dart';
 import 'package:flutter/material.dart';
