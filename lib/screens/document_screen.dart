@@ -12,6 +12,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_quill/flutter_quill.dart' as quill;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:routemaster/routemaster.dart';
+import '../constants.dart';
 
 class DocumentScreen extends ConsumerStatefulWidget {
   final String id;
@@ -111,8 +112,10 @@ class _DocumentScreenState extends ConsumerState<DocumentScreen> {
             padding: const EdgeInsets.all(10.0),
             child: ElevatedButton.icon(
               onPressed: () {
+                var url = '$host/#/document/${widget.id}';
+                // print(url);
                 Clipboard.setData(ClipboardData(
-                        text: 'http://localhost:3000/#/document/${widget.id}'))
+                        text: url))
                     .then((value) {
                   ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('Link copied!')));

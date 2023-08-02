@@ -115,6 +115,7 @@ class DocumentRepository {
       data: null,
     );
     try {
+      print(host);
       var res = await _client.get(
         Uri.parse('$host/docs/$id'),
         headers: {

@@ -45,7 +45,6 @@ documentRouter.get('/docs/:id', auth, async(req, res)=>{
     try{
         const document = await Document.findById(req.params.id);
         res.json(document);
-
     }catch(e){
         res.statusCode(500).json({error:e.message});
     }
